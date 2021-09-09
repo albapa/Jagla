@@ -1,0 +1,37 @@
+max_volume_per_atom=2000.0
+
+start_species=1 64 1.0
+start_energy_ceiling_per_atom=10000.0
+
+n_walkers=1920
+n_cull=1
+n_iter_times_fraction_killed=1600   
+out_file_prefix=Jagla64_02_n
+snapshot_interval=5000 
+traj_interval=10
+
+################################################################################
+
+atom_algorithm=MC
+n_model_calls_expected=2800
+n_atom_steps=1
+atom_traj_len=8
+n_cell_volume_steps=4
+n_cell_shear_steps=2
+n_cell_stretch_steps=2
+n_swap_steps=0
+
+################################################################################
+# Pressure in Jagla unit
+MC_cell_P=0.2
+
+MC_cell_min_aspect_ratio=0.8
+################################################################################
+
+energy_calculator=fortran
+FORTRAN_model = example_Jagla_model.so
+
+rng=numpy
+
+debug=0
+

@@ -3,17 +3,22 @@
 
 Albert B. Bartok, Gyorgy Hantal, Livia B. Partay
 
-Physical Review Letters (2021)
+Physical Review Letters 127, 015701 (2021)
 
-[link to publication]
+<https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.015701>
 
 ### Content:
 
-The structure folder contains the unit cell configurations for the new structures, 
+The ``structures`` folder contains the unit cell configurations for the new structures, and
 an example output trajectory for a Nested Sampling run.
 
-[hoomd MC scripts to be added]
+The ``HOOMD_simulation_scripts`` folder contains jupyter notebooks to perform NPT and Grand-canonical 
+simulations of the Jagla model with the HOOMD package. Note that the user defined potential only works with
+HOOMD if installed with the JIT package, which is not included in the default conda install! (See instructions 
+in the HOOMD-Blue manual.)
 
-[NS input files to be added]
+The file ``nested_sampling_input.inp`` is an example input file to perform nested sampling calculations on the Jagla
+model, with the pymatnest package at constant pressure. (model parameters to be specified within the Fortran package supplied 
+with pymatnest) 
 
-[TI script to be added] 
+[TI scripts to be added] 

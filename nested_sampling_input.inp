@@ -31,6 +31,10 @@ MC_cell_min_aspect_ratio=0.8
 energy_calculator=fortran
 FORTRAN_model = example_Jagla_model.so
 
+# define the jagla parameters below as <W_R> <minimum location (b)> <cutoff (c)>
+# the below parameters are the defualt in the code
+FORTRAN_model_params = 3.5 1.72 3.0
+
 rng=numpy
 
 debug=0

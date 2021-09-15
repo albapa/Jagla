@@ -18,7 +18,6 @@ HOOMD if installed with the JIT package, which is not included in the default co
 in the HOOMD-Blue manual.)
 
 The file ``nested_sampling_input.inp`` is an example input file to perform nested sampling calculations on the Jagla
-model, with the pymatnest package at constant pressure. (model parameters to be specified within the Fortran package supplied 
-with pymatnest) 
+model, with the pymatnest package at constant pressure.  
 
 [TI scripts to be added] 

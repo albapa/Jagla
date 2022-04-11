@@ -1,0 +1,42 @@
+max_volume_per_atom=500.0
+
+start_species=1 120 1.0
+start_energy_ceiling_per_atom=10000.0
+random_init_max_n_tries = 1000
+
+n_walkers=560 
+n_cull=1
+n_iter_times_fraction_killed=1900
+out_file_prefix=Jagla120_b1.76_2D_K560_L1600_p01_a               
+snapshot_interval=10000
+traj_interval=100 
+
+################################################################################
+
+atom_algorithm=MC
+n_model_calls_expected=1600
+n_atom_steps=1
+atom_traj_len=8
+n_cell_volume_steps=4
+n_cell_shear_steps=2
+n_cell_stretch_steps=2
+n_swap_steps=0
+
+2D = T
+Z_cell_axis = 10.0
+
+################################################################################
+# In 2D the true pressure is MC_cell_P*Z_cell_axis. set the value accordingly
+MC_cell_P=0.01 
+
+MC_cell_min_aspect_ratio=0.6
+################################################################################
+
+energy_calculator=fortran
+FORTRAN_model = example_Jagla_model.so
+# Jagla parameters: W_R; b; c
+FORTRAN_model_params = 3.336 1.76 4.8
+
+rng=numpy
+
+debug=0
